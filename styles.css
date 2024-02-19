@@ -1,0 +1,925 @@
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4caf50;
+  margin: 50px; /* Remove default margin to ensure full width */
+  scroll-behavior: smooth;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  background-image: url(/images/marketing-bg8.png);
+  background-position: 50% 50%;
+  background-color: #33a3ff;
+}
+
+/* Medium screens */
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px width */
+  .header {
+    font-size: 1.5em;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+/* Small screens */
+@media only screen and (max-width: 480px) {
+  /* Adjust styles for screens up to 480px width */
+  .header {
+    font-size: 1.2em;
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Updated styles for the navigation bar */
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.3s; /* Add opacity transition */
+}
+
+/* Make the navbar transparent initially */
+nav.transparent {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+}
+
+/* Updated styles for the hamburger button */
+#navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #navbar-toggler {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+}
+
+/* Updated styles for the navbar links */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Add the following style to center the dropdown items horizontally */
+.dropdown-menu {
+  transform: translateX(-50%);
+}
+
+/* Adjust the position of the dropdown triangle */
+.dropdown-menu::before {
+  left: 50%;
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  text-align: left;
+}
+
+.hero {
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  text-align: center;
+  padding: 30px 20px;
+  color: #ffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+
+/* Adjust other styles as needed */
+.hero h2 {
+  font-size: 2.5em; /* Example font size for the heading */
+}
+
+.hero p {
+  font-size: 1.2em; /* Example font size for the paragraph */
+}
+
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  display: inline-block;
+}
+
+.glowing-logo {
+  display: inline-block;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  display: flexbox;
+}
+
+.main-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  position: relative;
+}
+
+.features,
+.services {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px 20px;
+  color: #333;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.features h2,
+.services h2 {
+  margin-bottom: 30px;
+}
+
+/* Media query for small devices */
+@media only screen and (max-width: 767px) {
+  .features,
+  .services {
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto;
+  }
+}
+
+.feature-item {
+  flex: 0 0 30%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 50px 0 50px 0;
+  border-radius: 10px;
+  transition: transform 0.2s; /* Animation */
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.feature-item:hover {
+  box-shadow: 0 0 50px rgba(209, 80, 235, 0.5); /* Light shadow effect on hover */
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.feature-item-img {
+  flex: 0 0 30%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: auto;
+  max-width: 200px;
+  height: auto;
+}
+
+.carousel {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  margin: auto;
+  padding: auto;
+}
+
+.feature-item-2 {
+  flex: 0 0 100%; /* Adjust the width as needed */
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+.feature-item-2 figure img {
+  width: 96px; /* Adjust the size as needed */
+  height: 96px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+.feature-item-2:hover img {
+  filter: brightness(1.5); /* Brightness on hover */
+}
+
+.features,
+.services,
+.service-item {
+  flex: 0 0 30%; /* Adjust the width as needed */
+  margin-bottom: 30px;
+  padding-right: 30px;
+}
+
+.features img,
+.services img {
+  width: 300px; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 10px;
+  display: flex;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.service-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.service-item img {
+  width: 80px; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* SEO Page Styles */
+.seo-intro-image {
+  position: relative;
+}
+
+.container-fluid {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 10px;
+  max-width: 1400px;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* .manp {
+  width: 100%;
+  height: auto;
+} */
+
+.col-sm-5-seo-intro-image {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 50%;
+}
+
+.circ1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background-color: #12d4e7;
+  border-radius: 50%;
+}
+
+.seo-intro img {
+  width: 100%;
+  height: auto;
+}
+
+.seo-intro h2 {
+  color: #333;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.seo-intro p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-button {
+  background-color: #ff00cc;
+  color: #ffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease; /* Add transition for smooth effect */
+  border-radius: 30px;
+}
+
+.contact-button:hover {
+  background-color: rgba(240, 93, 215, 0.5); /* Change the color when hovered */
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(64, 243, 234);
+  color: #f365db; /* Text color */
+  font-weight: 600;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 3s;
+}
+
+.back-to-top-button img {
+  width: 35px; /* Adjust the size as needed */
+  height: auto;
+}
+
+/* Hover effect - change colors as needed */
+.back-to-top-button:hover {
+  background: rgba(47, 208, 219, 0.5);
+}
+
+.glowing-button {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+.packages-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 20px;
+  color: #333;
+  margin: 50px;
+}
+
+/* Style for the packages container */
+.packages-container {
+  display: flex; /* Use flexbox to align packages in a row */
+  flex-wrap: wrap; /* Allow packages to wrap to the next line */
+  justify-content: space-around; /* Add space between packages */
+  margin: 50px;
+}
+
+/* Style for the package containers */
+.packages {
+  display: flex; /* Use flexbox to align packages in a row */
+  flex-wrap: wrap; /* Allow packages to wrap to the next line */
+  justify-content: space-around; /* Add space between packages */
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 20px;
+  color: #333;
+}
+
+/* Style for individual package */
+.package {
+  border: 2px solid #12d4e7; /* Border color */
+  padding: 20px 10px 20px 10px;
+  width: 30%; /* Set a fixed width for each package */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+  margin: 10px; /* Add margin to create space between packages */
+
+  /* Hover effect */
+  &:hover {
+    box-shadow: 0 0 50px rgba(209, 80, 235, 0.5); /* Light shadow effect on hover */
+  }
+}
+
+/* Styling for the heading of the package */
+.package h3 {
+  color: #12d4e7;
+}
+
+/* Styling for the price */
+.price {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling for the deposit information */
+.deposit {
+  color: #555;
+}
+
+/* Styling for the list items */
+.package ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.package li {
+  margin-bottom: 10px;
+  position: relative;
+
+  /* Style for the question mark icon */
+  &:hover::after {
+    content: "?";
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    font-size: 1.2em;
+    color: #12d4e7;
+    cursor: pointer;
+  }
+}
+
+/* Styling for the contact button */
+.contact-button {
+  background-color: #12d4e7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.center-horizontal {
+  margin: 30px auto;
+  display: table;
+  background-color: #12d4e7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 30px;
+}
+
+.center-horizontal:hover {
+  background-color: rgba(240, 93, 215, 0.5); /* Change the color when hovered */
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.social-media-marketing-1 {
+  width: 100%; /* Set the width of the image to fill the container */
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 20px; /* Add some spacing between image and text */
+  margin-top: 50px;
+}
+
+.text-container {
+  flex: 1; /* Allow the text container to grow and fill available space */
+}
+.marketing-packages {
+  font-size: 50px;
+  font-family: fantasy;
+  color: #12d4e7;
+}
+
+.packages-info {
+  font-size: 20px;
+  font-family: fantasy;
+  color: #12d4e7;
+  font-weight: 100;
+}
+
+.tiktok {
+  width: 50%;
+}
+
+.domains-image-1 {
+  display: flex; /* Use flexbox to align packages in a row */
+  flex-wrap: wrap; /* Allow packages to wrap to the next line */
+  justify-content: space-around; /* Add space between packages */
+  text-align: center;
+  padding-right: 30px;
+  width: 50%;
+  margin-top: 0px;
+}
+
+.domains-text-container h1 {
+  color: #960ba3;
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.domains-text-container-2 {
+  border: 2px solid #12d4e7; /* Border color */
+  padding: 20px 10px 20px 10px;
+  width: 30%; /* Set a fixed width for each package */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+  margin: 20px; /* Add margin to create space between packages */
+  text-align: center;
+  margin: 50px 20px 30px 20px;
+
+  /* Hover effect */
+  &:hover {
+    box-shadow: 0 0 30px rgba(209, 80, 235, 0.5); /* Light shadow effect on hover */
+  }
+}
+
+.contact-form {
+  margin: 2em;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+.google-map {
+  margin: 1em;
+  width: 100%;
+  /* Add additional styling for your Google Map container */
+}
+
+.contact-details {
+  margin: 2em;
+  /* Add additional styling for your contact details container */
+}
+
+.contact-form-2 {
+  border: 3px solid #12d4e7;
+  width: 500px;
+  padding: 10px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4caf50;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #12d4e7;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #12d4e7;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+.contact {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#contact-submit {
+  background-color: #007bff;
+  color: #ffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  flex: 0 0 48%; /* Adjust the width as needed */
+  margin-bottom: 50px;
+}
+
+.image-container {
+  flex: 0 0 48%; /* Adjust the width as needed */
+}
+
+.analytics-image {
+  max-width: 80%;
+  min-width: 200px;
+  height: auto;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+
+.form-container {
+  width: 70%; /* Adjust the width of the form container */
+  float: left;
+  margin-left: 60px;
+  margin-top: -15px;
+  margin-right: 280px;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%; /* Adjust the width of the image container */
+  margin-left: 30px;
+  margin-top: 200px;
+}
+
+.maintenance-font-1 {
+  color: #6666ff;
+}
+
+.maintenance-font-2 {
+  color: #e97d17;
+}
+
+.maintenance-font-3 {
+  color: #12e724;
+}
+
+.maintenance-font-4 {
+  color: #13ddd3;
+}
+
+.maintenance-txt-1 {
+  margin: 50px 0px 20px 0px;
+  color: #960ba3;
+}
+
+.carousel-container-1 {
+  text-align: center;
+}
+
+.carousel-container-2 {
+  color: #12e724;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.carousel-container-3 {
+  font-weight: 700;
+}
+
+.carousel-container-4 {
+  color: #666;
+}
+
+.container-bg-blue {
+  position: relative;
+  background: rgba(194, 35, 35, 0.1);
+  border-radius: 20px;
+  padding: 80px 50px;
+  display: flex;
+  margin: auto;
+  max-width: 1320px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  overflow: hidden; /* Hide overflow for smaller devices */
+}
+
+.cls-h2 {
+  font-size: 40px;
+  color: #252a6a;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: left !important;
+}
+
+.prg-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container-bg-blue-1 {
+  width: 60%;
+  z-index: 1; /* Ensure text is in front of the image */
+}
+
+.contact-us {
+  border-radius: 15px;
+  padding: 10px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 2px 0 3px #000;
+  cursor: pointer;
+}
+
+.feature-item-3 {
+  flex: 0 0 40%; /* Adjust the width of the image container */
+  overflow: hidden; /* Hide overflow for smaller devices */
+}
+
+.feature-item-3 img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto;
+}
+
+.arrow-right {
+  animation: slide1 1s ease-in-out infinite;
+}
+
+#success_message{ display: none;}

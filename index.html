@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script src="/script.js"></script>
+    <title>Digital Vista - Home</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            data-toggle="collapse"-data-target="#myNavbar"
+            id="navbar-toggler"
+            class="navbar-toggler"
+            aria-label="Toggle navigation"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a
+              href="/Marketing/marketing.html"
+              class="nav-link dropdown-toggle"
+              id="marketingDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Marketing</a
+            >
+            <div class="dropdown-menu" aria-labelledby="marketingDropdown">
+              <a class="dropdown-item" href="/Marketing/google-ads.html"
+                >Google Ads</a
+              >
+              <a class="dropdown-item" href="/Marketing/seo.html">SEO</a>
+              <a class="dropdown-item" href="/Marketing/social-media.html"
+                >Social Media</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="/Services/services.html"
+              class="nav-link dropdown-toggle"
+              id="servicesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Services</a
+            >
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="/Services/web-design.html"
+                >Web Design</a
+              >
+              <a class="dropdown-item" href="/Services/domains.html">Domains</a>
+              <a class="dropdown-item" href="/Services/hosting.html">Hosting</a>
+              <a class="dropdown-item" href="/Services/website-maintenance.html"
+                >Website Maintenance</a
+              >
+              <a class="dropdown-item" href="/Services/domain-registration.html"
+                >Domain Registration</a
+              >
+            </div>
+          </li>
+          <li class="nav-item"><a href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <div class="logo-container">
+        <img
+          src="/images/Digital Vista Logo 2.png"
+          alt="Digital Vista Logo"
+          class="logo glowing-logo"
+        />
+      </div>
+      <h1>Digital Vista</h1>
+      <p>Transforming Ideas into Reality</p>
+
+      <section class="hero">
+        <div>
+          <h1>
+            <b>Digital Marketing &</b>
+            <br />
+            <b>Website Design</b>
+          </h1>
+        </div>
+      </section>
+    </header>
+
+    <section class="features">
+      <div class="carousel">
+        <div class="feature-item">
+          <a href="/Services/web-design.html"
+            ><img src="/images/Website Design Layout.jpg" alt="Web Design Icon"
+          /></a>
+          <h3>Website Design</h3>
+          <p>
+            We create stunning and responsive websites tailored to your business
+            needs.
+          </p>
+        </div>
+        <div class="feature-item">
+          <a href="/Services/website-maintenance.html"
+            ><img
+              src="/images/website-design-layout-5.jpg"
+              alt="Maintenance Icon"
+          /></a>
+          <h3>Website Maintenance</h3>
+          <p>
+            Ongoing support and updates to ensure your website runs smoothly.
+          </p>
+        </div>
+        <div class="feature-item">
+          <a href="/Marketing/social-media.html"
+            ><img src="/images/socials-image-1.jpg" alt="Social Media Icon"
+          /></a>
+          <h3>Social Media</h3>
+          <p>
+            Enhance Your Reach: Seamlessly Connect with Your Audience on Social
+            Platforms
+          </p>
+        </div>
+        <div class="feature-item">
+          <a href="/Marketing/marketing.html"
+            ><img
+              src="/images/Website Design Layout 2.jpg"
+              alt="Digital Marketing Icon"
+          /></a>
+          <h3>Digital Marketing</h3>
+          <p>
+            You've come to the right place if you want your website to rank #1
+            on Google
+          </p>
+        </div>
+        <div class="feature-item">
+          <a href="/Services/hosting.html"
+            ><img
+              src="/images/Website Design Layout 4.jpg"
+              alt="Web Hosting Icon"
+          /></a>
+          <h3>Web Hosting</h3>
+          <p>Effortless Hosting Solutions for Your Website Needs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="content">
+        <h2>Get in Touch!</h2>
+        <p>
+          We'd like to welcome you to a free, no-obligation meeting with us.
+          Explain your requirements to us, and we will present you with
+          solutions.
+        </p>
+        <fieldset>
+          <a href="/contact.html"
+            ><button
+              class="contact-us"
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...Sending"
+            >
+              I like to be clicked
+            </button></a
+          >
+        </fieldset>
+      </div>
+      <div class="feature-item-img">
+        <img
+          class="analytics-image"
+          src="/images/website-analytics-1.jpg"
+          alt="Images of a website on different devices"
+        />
+      </div>
+    </section>
+
+    <section class="carousel-container-1">
+      <div class="content">
+        <h3 class="carousel-container-2">OUR FEATURES</h3>
+        <h2 class="carousel-container-3">Why Choose Digital Vista?</h2>
+        <p class="carousel-container-4">
+          Here’s a glimpse of the result-oriented services that make us a top
+          web and mobile app development company.
+        </p>
+      </div>
+    </section>
+
+    <section class="carousel">
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-quality-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>Top Work Quality</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-backlog-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>Agile Development</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-code-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>User-Centric Development</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-coin-in-hand-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>Cost-effective Solutions</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-online-support-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>24*7 Support</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-team-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>Dedicated Teams</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+      <div class="feature-item-2">
+        <figure>
+          <img src="/Icons/icons8-time-96.png" alt="Qaulity Icon" />
+        </figure>
+        <figcaption>
+          <h3>Time Delivery</h3>
+          <p>
+            We never compromise on job quality and always produce high-quality
+            results while sticking to corporate demands and project
+            specifications.
+          </p>
+        </figcaption>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-bg-blue">
+        <div class="container-bg-blue-1">
+          <h2 class="cls-h2">
+            With Our Development Assistance, you can gain an advantage over your
+            competitors!
+          </h2>
+          <p class="prg-text">
+            Connect with Digital Vista to provide out-of-the-box development
+            solutions to organizations.
+          </p>
+          <a href="/contact.html"
+            ><button class="contact-us">
+              CONNECT WITH US<img
+                class="arrow-right"
+                src="/images/Icons/Arrows/Static/icons8-arrow-64.png"
+                alt="Arrow pointing right"
+              /></button
+          ></a>
+        </div>
+        <div class="feature-item-3">
+          <img src="/images/women-smiling-1.png" alt="Women Smiling" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        &copy; 2023 Digital Vista | Tableview, Cape Town, 7441 | +27 (63) 102
+        0508 | admin@digitalvista.tech
+      </p>
+    </footer>
+  </body>
+</html>
